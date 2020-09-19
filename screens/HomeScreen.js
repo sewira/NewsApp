@@ -33,7 +33,15 @@ const HomeScreen = ({ navigation }) => {
   }, []);
 
   const renderItem = ({ item }) => {
-    const { title, urlToImage, author, content, description, url } = item;
+    const {
+      title,
+      urlToImage,
+      author,
+      content,
+      description,
+      url,
+      publishedAt,
+    } = item;
     return (
       <TouchableOpacity
         onPress={() =>

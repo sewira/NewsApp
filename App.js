@@ -9,6 +9,7 @@ import HomeScreen from "./screens/HomeScreen";
 import DetailScreen from "./screens/DetailScreen";
 import SearchScreen from "./screens/SearchScreen";
 import AboutScreen from "./screens/AboutScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 import { newsReducer, initialState } from "./Context/NewsReducer";
 
@@ -56,9 +57,9 @@ export default function App() {
     // <GlobalContext.Provider value={(state, dispatch)}>
     //   <GlobalContext.Consumer>
     <NavigationContainer>
-      <Stack.Navigator headerMode="none">
+      <Stack.Navigator headerMode="none" initialRouteName="Login">
         <Stack.Screen name="TabHome" component={MyTab} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Detail" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
